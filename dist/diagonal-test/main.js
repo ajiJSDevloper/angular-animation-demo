@@ -603,7 +603,7 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = [".poster-list[_ngcontent-%COMP%] {\n  height: 100%;\n  overflow-y: scroll;\n  padding-top: 70px; }"];
+var styles = [".poster-list[_ngcontent-%COMP%] {\n  height: calc(100% - 70px);\n  overflow-y: scroll;\n  padding-top: 70px; }"];
 
 
 
