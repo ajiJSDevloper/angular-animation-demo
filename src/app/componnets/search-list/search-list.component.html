@@ -9,7 +9,7 @@
         <span>{{d.name}}</span>
       </div>
     </li>
-<li *ngIf="data.length == 0 && searched == true" class="card-item no-result">
+    <li *ngIf="data.length == 0 && searched == true && loading==false" class="card-item no-result">
       <p>Sorry! No result found</p>
     </li>
   </ul>

@@ -1,5 +1,7 @@
 <div class="poster-list-item" [@onEnterItem]>
-<img src="assets/poster/{{data['poster-image']}}" (error)="updateUrl($event)" alt="{{data['poster-image']}}">
+  <div class="poster">
+    <img src="assets/poster/{{data['poster-image']}}" (error)="updateUrl($event)" alt="{{data['poster-image']}}">
+  </div>
   <div class="label">
     <p>{{data.name}}</p>
   </div>

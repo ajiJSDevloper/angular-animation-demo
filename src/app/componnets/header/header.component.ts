@@ -78,7 +78,7 @@ export class HeaderComponent implements OnInit {
       searchText:this.searchText
     })
     
-   this.searchForm.controls['searchText'].valueChanges
+    this.searchText.valueChanges
       .pipe(
         debounceTime(500),
         distinctUntilChanged(),
