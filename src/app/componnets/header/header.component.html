@@ -1,0 +1,18 @@
+<form class="w-100" (submit)="searchOpt($event)" [formGroup]="searchForm">
+  <header class="app-header flex-align">
+    <div class="flex-align">
+      <button type="button" class="icon-btn">
+        <img src="assets/icons/back.png">
+      </button>
+    </div>
+    <div class="flex-align-end w-100">
+      <span class="title" [@searchBoxAnimation]="searchState">Romantic comedy</span>
+      <input formControlName="searchText" (focus)="focusText()" (focusout)="focusOutText()" placeholder="Search for shows, movies, sports etc.." [@searchTextAnimation]="searchState"
+        class="search" type="text">
+    </div>
+    <button type="button" class="icon-btn" (click)="toggleSearch()">
+      <img src="assets/icons/search.png">
+    </button>
+  </header>
+</form>
+<app-search-list [loading]="_loading" [data]="results" [searched]="searched" [@searchListAnimation]="searchListToggler" class="searchWrapper"></app-search-list>

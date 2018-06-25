@@ -1,0 +1,13 @@
+.app-content{
+    background: #171717;
+    height: 100%;
+    overflow: hidden;
+}
+.list-container{
+    padding-top: 70px;
+    height:calc(100% - 70px);
+    overflow:hidden;
+    app-poster-list{
+        width: 100%;
+    }
+}

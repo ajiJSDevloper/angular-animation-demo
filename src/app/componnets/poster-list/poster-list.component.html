@@ -1,0 +1,8 @@
+<div class="poster-list style-scroll"
+    infiniteScroll 
+    [infiniteScrollDistance]="1" 
+    [infiniteScrollThrottle]="300"
+    [scrollWindow]="false"
+    (scrolled)="onScroll()">
+ <poster-list-item *ngFor="let data of posters" [data]="data"></poster-list-item>
+</div>

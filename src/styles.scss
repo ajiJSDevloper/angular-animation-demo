@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Titillium Web', sans-serif; // background: #000;
+  color: #fff
+}
+
+button {
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.m-0 {
+  margin: 0px !important;
+}
+
+%default-flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; // flex:1
+}
+
+.flex-align {
+  @extend %default-flex-box;
+}
+
+.flex-align-end {
+  @extend %default-flex-box;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  img {
+    width: 15px;
+  }
+}
+
+.poster-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  poster-list-item {
+    margin: 0 7.5px;
+    width: calc(33.33% - 20px);
+    &:first-child {
+      margin: 0px 7.5px 0px 15px;
+    }
+    &:nth-child(3n) {
+      margin: 0px 15px 0px 7.5px;
+    }
+    &:nth-child(3n+1) {
+      margin: 0px 7.5px 0px 15px;
+    }
+  }
+}
+
+.style-scroll::-webkit-scrollbar {
+  width: 0px;
+}
+
+.style-scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.style-scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.style-scroll::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+.style-scroll::-webkit-scrollbar-thumb:active {
+  background: #fff;
+}
+
+.poster-list-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  div.label {
+    p {
+      margin-top: 0;
+      margin-bottom: 30px
+    }
+  }
+}

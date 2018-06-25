@@ -1,0 +1,16 @@
+<div class="search-container style-scroll">
+  <app-loader *ngIf="loading"></app-loader>
+  <ul>
+    <li *ngFor="let d of data; let i = index" class="card-item">
+      <div class="poster">
+        <img src="assets/poster/{{d['poster-image']}}" (error)="updateUrl($event)">
+      </div>
+      <div class="title">
+        <span>{{d.name}}</span>
+      </div>
+    </li>
+<li *ngIf="data.length == 0 && searched == true" class="card-item no-result">
+      <p>Sorry! No result found</p>
+    </li>
+  </ul>
+</div>
