@@ -87,6 +87,10 @@ MIT
 MIT
 MIT
 
+@angular/router@6.0.6
+MIT
+MIT
+
 ngx-infinite-scroll@6.0.1
 MIT
 MIT License

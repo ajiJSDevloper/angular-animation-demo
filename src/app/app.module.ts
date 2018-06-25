@@ -12,6 +12,17 @@ import { PosterListItemsComponent } from './componnets/poster-list-items/poster-
 import { SearchListComponent } from './componnets/search-list/search-list.component';
 import { LoaderComponent } from './componnets/loader/loader.component';
 
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'home', component: AppComponent },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  { path: '**', component: AppComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +38,8 @@ import { LoaderComponent } from './componnets/loader/loader.component';
     HttpClientModule,
     InfiniteScrollModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
