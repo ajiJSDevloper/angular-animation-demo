@@ -39,7 +39,9 @@ const appRoutes: Routes = [
     InfiniteScrollModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes,{
+      useHash:true
+    })
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
